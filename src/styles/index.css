@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  color-scheme: dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #030712;
+  color: #e2e8f0;
+}
+
+code, pre, .font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, 'Courier New', monospace;
+}
+
+/* Радиальный градиентный фон */
+.app-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -20%, rgba(16, 185, 129, 0.15), transparent),
+    radial-gradient(ellipse 60% 50% at 80% 100%, rgba(56, 189, 248, 0.1), transparent),
+    radial-gradient(ellipse 60% 50% at 10% 80%, rgba(168, 85, 247, 0.08), transparent);
+  pointer-events: none;
+}
+
+/* Свечение для подсвеченных ячеек */
+.glow-info    { box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.6), 0 0 24px -4px rgba(56, 189, 248, 0.5); }
+.glow-success { box-shadow: 0 0 0 1px rgba(52, 211, 153, 0.7), 0 0 24px -4px rgba(52, 211, 153, 0.6); }
+.glow-warning { box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.7), 0 0 24px -4px rgba(251, 191, 36, 0.6); }
+.glow-error   { box-shadow: 0 0 0 1px rgba(244, 63, 94, 0.7),  0 0 24px -4px rgba(244, 63, 94, 0.6); }
+
+/* Кастомный скроллбар */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Красивое кольцо фокуса */
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #10b981, 0 0 0 4px rgba(16, 185, 129, 0.2);
+  border-radius: 8px;
+}
