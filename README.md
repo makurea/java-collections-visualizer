@@ -1,4 +1,4 @@
-# ☕ Java Collections Visualizer           
+#  ☕  Java Collections Visualizer           
 
 Интерактивный визуализатор коллекций Java. Пошагово показывает, что происходит внутри `ArrayList`, `LinkedList`, `HashMap` и `HashSet` при вызове основных методов. Все описания — на русском
 
